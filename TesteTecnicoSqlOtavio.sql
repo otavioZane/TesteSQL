@@ -14,7 +14,7 @@ where tb_Processo.dtEncerramento <= '2013-12-31'
 
 select dtEncerramento, count(dtEncerramento) as quantia
 from tb_Processo
-group by dtEncerramento having count(dtEncerramento) < 5;
+group by dtEncerramento having count(dtEncerramento) > 5;
 
 -- 4. Possuímos um número de identificação do processo, onde o mesmo contem 12 caracteres com zero à esquerda, contudo nosso modelo e dados ele é apresentado como bigint. Como 
 -- fazer para apresenta-lo com 12 caracteres considerando os zeros a esquerda?
@@ -24,3 +24,4 @@ where idProcesso = 1
 
 select * from tb_Processo
 select * from tb_Andamento
+select * from tb_Status
